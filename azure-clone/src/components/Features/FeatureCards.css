@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/font1.woff2')
+}
+
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/font2.woff2')
+}
+
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/font3.woff2')
+}
+.each-feature-card  {
+    margin: 0px 0px 48px;
+    box-shadow: 0 0.1875rem 0.4375rem 0 rgb(0 0 0 / 13%), 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 11%);
+    padding-bottom: 34px;
+    border-radius: 4px;
+}
+.each-feature-card p {
+    padding: 24px 24px 0px;
+    margin: 0px 0px 16px;
+    font-family: fontTwo;
+}
+.each-feature-card img {
+    width:37px;
+    padding-top: 30px;
+    
+}
+.each-feature-card a {
+    font-size: 16px;
+    font-family: fontOne;
+    color: #0067b8;
+    padding-block: 30px;
+}
+/* .each-feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} */
+@media screen and (min-width:860px) {
+    .each-feature-card a {
+        display: block;
+        width:180px;
+        padding: 18px 24px 14px 24px;
+        /* padding-top: 25px; */
+        
+    }
+    .each-feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+

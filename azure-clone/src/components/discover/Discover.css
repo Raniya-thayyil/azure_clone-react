@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/font1.woff2')
+}
+
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/font2.woff2')
+}
+
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/font3.woff2')
+}
+.discover-head {
+    padding: 24px 12px;
+}
+.discover-head h2 {
+    font-size: 19px;
+    font-family: fontOne;
+    text-align: left;
+    margin: 0px 0px 8px;
+}
+.discover-cards-main {
+    padding: 0px 24px;
+}
+.inside-discovercard {
+    padding: 24px 24px 0px;
+    text-align: left;
+}
+.inside-discovercard h3 {
+    font-family: fontOne;
+    font-size: 14px;
+    margin: 0px 0px 8px;
+}
+.inside-discovercard p {
+    font-family: fontTwo;
+    font-size: 16px;
+    margin: 0px 0px 16px;
+    line-height: 1.5;
+}
+.inside-discovercard a {
+    text-decoration: none;
+    color: #0067b8;
+    font-family: fontOne;
+    margin-right: 6px;
+}
+@media screen and (min-width:860px) {
+    .discover-cards-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+    }
+    .discover-head h2{
+        text-align: center;
+    }
+    
+}
+@media screen and (min-width:1084px) {
+    .discover-cards-main {
+        padding: 0px 10%;
+    }
+
+}
+

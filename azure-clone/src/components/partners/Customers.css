@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/font1.woff2')
+}
+
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/font2.woff2')
+}
+
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/font3.woff2')
+}
+.customer-img img {
+    width: 100%;
+}
+
+.case-study {
+    margin-top: -4px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: fontOne;
+    font-size: 18px;
+    padding-inline: 12px;
+    padding-block: 48px;
+    text-align: left;
+}
+.case-study p {
+    margin: 0px 0px 8px;
+    text-align: left;
+}
+
+.case-study a {
+    text-decoration: none;
+    color: #50e6ff;
+    font-size: 16px;
+    font-family: fontOne;
+    margin: 8px 0px;
+    margin-right: 4px;
+}
+/* .text-chevron {
+    position: relative;
+    
+    
+} */
+.chevron {
+   color: #50e6ff;
+}
+@media screen and (min-width:860px) {
+    .img-casestudy {
+        position: relative;
+    }
+    .case-study {
+        position: absolute;
+        top:281px;
+        margin-inline: 13px;
+        padding: 48px;
+    }   
+}
+
+@media screen and (min-width:1084px) {
+    .case-study {
+        top: 178px;
+        width: 50%;
+        left: 50px;
+    }
+    .case-study p {
+        font-size: 19px;
+    }
+
+}
+@media screen and (min-width:1497px) {
+    .case-study {
+        top:500px;
+        left:100px;
+    }
+}
+@media screen and (min-width:1496px) {
+    .case-study {
+        top:345px;
+        left:60px;
+    }
+    .case-study p {
+        font-size: 21px;
+    }
+
+}

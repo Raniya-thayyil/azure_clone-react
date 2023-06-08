@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/font1.woff2')
+}
+
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/font2.woff2')
+}
+
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/font3.woff2')
+}
+.partners ul{
+    display: flex;
+    list-style-type: none;
+    overflow: scroll;
+    margin-bottom: 44px;
+}
+.partners ul li {
+    width: 100%;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (min-width:768px) {
+    .partners ul li {
+        padding-inline:45px ;
+    }
+    
+}
+

@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/font1.woff2')
+}
+
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/font2.woff2')
+}
+
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/font3.woff2')
+}
+.ads-main {
+    padding-inline:12px;
+    margin-top:48px ;
+}
+.each-ad-card {
+    box-shadow: 0 .375rem .875rem 0 rgba(0,0,0,.13),0 .0625rem .25rem 0 rgba(0,0,0,.11);
+    margin:0px 0px 48px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    padding-bottom: 0;
+    border-radius: 10px;
+    
+}
+.each-ad-card img {
+    width: 34px;
+}
+.inside-ad {
+    padding-top: 24px;
+    text-align: left;
+    color: #ffffff;
+    font-family: fontOne;
+}
+.inside-ad a {
+    font-size: 18px;
+    color: #ffffff;
+    
+
+}
+.inside-ad p {
+    font-family: fontTwo;
+    line-height: 1.55;
+}
+.each-ad-card:nth-of-type(1) {
+    background: #243a5e;
+}
+.each-ad-card:nth-of-type(2) {
+    background: #000000;
+}
+.each-ad-card:nth-of-type(3) {
+    background: #0062ad;
+}
+.blank-space {
+    padding-bottom: 48px;
+}
+@media screen and (min-width:860px) {
+    .ads-main {
+        display: flex;
+        margin-top: 202px;
+        gap: 24px;
+    }
+    
+}
+@media screen and (min-width:1024px) {
+    .ads-main {
+        margin-top: 154px;
+
+    }
+
+}
+@media screen and (min-width:1080px){
+    .ads-main {
+        margin-top: 65px;
+
+    }
+}
+@media screen and (min-width:1084px) {
+    .ads-main {
+        padding-inline: 5%;
+
+    }
+}

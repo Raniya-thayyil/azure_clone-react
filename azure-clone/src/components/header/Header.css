@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src : url('../fonts/font1.woff2')
+}
+@font-face {
+    font-family: fontTwo;
+    src : url('../fonts/font2.woff2')
+}
+@font-face {
+    font-family: fontThree;
+    src : url('../fonts/font3.woff2')
+}
+
+.azure-header-main {
+   
+    padding: 18px;
+
+}
+.azure-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.text-hamburger {
+    display: flex;
+    align-items: center;
+    
+}
+.hamburger {
+    padding: 1px 6px;
+}
+.hamburger img {
+    width: 20px;
+    height: 17px;
+    margin-right: 12px;
+    
+}
+.search-text {
+    display: flex;
+}
+.text-azure a{
+    display: block;
+    text-decoration: none;
+    color: #1a1a1f;
+    font-size: 18px;
+    font-family: fontOne;
+    transform: translateY(-2px);
+    
+
+}
+.text-sign a {
+    text-decoration: none;
+    color: #1a1a1f;
+    font-family: fontTwo;
+    padding: 20px;
+    font-size: 14px;
+
+
+}
+.search-icon {
+    transform: translate(-12px, 3px);
+}
+.azure-header-tablet {
+    display: none;
+}
+.header-desktop {
+    display: none;
+}
+.right-nav {
+    display: none;
+}
+
+
+@media screen and (min-width:748px) {
+    .azure-header {
+        display: none;
+    }
+    .azure-header-main {   
+        padding: 0px;    
+        /* display: flex;
+        justify-content: space-between; */
+    }
+    .azure-header-tablet {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+    }
+    .azure-logo-tab {
+        display: flex;
+    }
+    .azure-icon img {
+        width:24px
+    }
+    .azure-text a {
+        text-decoration: none;
+        color: #1a1a1f;
+        font-size: 18px;
+        font-family: fontOne;
+        margin: 0px 0px 0px 12px;
+
+    }
+    .nav-header {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        margin-right: 77px;
+    }
+    .list-items {
+        
+        list-style: none;
+        margin: 0px 0px 0px 12px;
+    }
+    .list-items li {
+        /* padding: 20px 8px; */
+        display: flex;
+    }
+    .text-angle {
+        
+        padding: 20px 8px;
+        /* padding-top: 12px; */
+    }
+    .list-items li a {
+        text-decoration: none;
+        font-size: 13px;
+        color: #1a1a1f;
+        
+    }
+    .list-items li img {
+        width: 6px;
+        margin: 5px 0px 0px 4px;
+        
+
+    }
+    .sign {
+        display: flex;
+        align-items: center;
+    }
+    /* .signin-main {
+        display: flex;
+        align-items: center;
+    } */
+    .sign-more img {
+        width: 40px;
+        padding: 15px 8px;
+    }
+    .sign-text a{
+        padding: 20px 8px;
+        text-decoration: none;
+        font-size: 13px;
+        color: #1a1a1f;
+
+
+    }
+
+    
+}
+
+@media screen and (min-width:1080px) {
+    .azure-header-main {
+        display: flex;
+        justify-content: space-between;
+    }
+    .sign {
+        display: none;
+    }
+    .right-nav {
+        display: flex;
+        align-items: center;
+    }
+    .right-navbar-ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+
+    }
+    .right-navbar-ul li {
+        font-size: 13px;
+        width: 50%;
+
+
+    }
+    .right-navbar-ul li a {
+        text-decoration: none;
+        color: #1a1a1f;
+        font-family: fontTwo;
+        padding: 8px;
+    }
+    form input {
+        border: 1px solid #1a1a1f ;
+        border-radius: 5px;
+        width: 120px ;
+        padding:7px;
+        font-family: fontOne;
+        margin-right: 20px;
+    }
+    .search-field {
+        position: relative;
+    }
+    form img {
+        position: absolute;
+        right: 29px;
+        top:9px;
+
+    }
+    .contact-sale {
+        white-space: nowrap;
+    }
+    .nav-header {
+        margin-right: 0;
+    }
+    li .button {
+        background-color: #89c402;
+        border: 1px solid #6f9e02;
+        color: #1a1a1f;
+        display: inline-block;
+        font-family: fontOne;
+        font-size: 12px;
+        font-weight: 600;
+        padding: 9px;
+        line-height: 1;
+        text-align: center;
+        border-radius: 4px;
+        margin: 0px 9px;
+        width: 65px;
+        transform: translate(0px, -1px);
+
+    }
+    .sign-in-down {
+        white-space: nowrap;
+    }
+
+
+}
+
