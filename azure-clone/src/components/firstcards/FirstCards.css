@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: fontOne;
+    src: url('../fonts/font1.woff2')
+}
+
+@font-face {
+    font-family: fontTwo;
+    src: url('../fonts/font2.woff2')
+}
+
+@font-face {
+    font-family: fontThree;
+    src: url('../fonts/font3.woff2')
+}
+
+.cards-main {
+    padding-inline:12px ;
+}
+.each-card img {
+    width: 100%;
+}
+.each-card {
+    margin: 0px 0px 48px;
+    box-shadow: 0 0.1875rem 0.4375rem 0 rgb(0 0 0 / 13%), 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 11%);
+}
+.blank-space {
+    padding: 16px 16px 24px;
+}
+.inside-card {
+    padding: 24px 24px 0px;
+}
+.inside-card a {
+    display: block;
+    color: #0067b8;
+    font-family: fontOne;
+    font-size: 18px;
+    text-align: left;
+    
+}
+.inside-card p {
+    font-size: 16px;
+    font-family: fontTwo;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0px 0px 16px;
+    margin-top: 8px;
+}
+
+.link-main {
+    margin-block: 16px;
+    
+}
+.links {
+    padding:16px 24px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.links a {
+    text-decoration: none;
+    color: #0078d4;
+    border: 2px solid #0078d4;
+    padding: 7px;
+    margin-left: 8px;    
+    font-size: 16px;
+    font-family: fontOne;
+}
+.ideas-main {
+    padding: 72px 0px 0px;
+}
+.ideas-main h2 {
+    padding: 0px 12px;
+    margin: 0px 0px 8px;
+    font-size: 19px;
+    font-family: fontOne;
+}
+.space {
+    padding: 48px 0px 0px;
+}
+
+@media screen and (min-width:860px) {
+   .cards-main {
+    display: flex;
+    gap: 24px;
+    
+   }  
+    
+}
+
+@media screen and (min-width:1084px) {
+    .cards-main {
+        padding-inline:55px ;
+    }
+    .inside-card a {
+        font-size: 19px;
+    }
+
+    
+}
+
+@media screen and (min-width:1440px) {
+    .cards-main {
+        padding-inline:8% ;
+    }
+    .inside-card a {
+        font-size: 21px;
+    }
+
+
+    
+}
