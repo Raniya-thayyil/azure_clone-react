@@ -11,19 +11,13 @@ import DeveloperStory from './components/developerstory/DeveloperStory';
 import Advertisement from './components/advertisement/Advertisement';
 import Footer from './components/footer/Footer';
 
-function App() {
+import { useState, useEffect } from 'react';
+import AzureHomePage from './AzureHomePage';
+
+function App() {  
   return (
     <div className="App">
-      <Header/>
-      <Invent/>
-      <FirstCards/>
-      <Features/>
-      <Partners/>
-      <HomeAccelerate/>
-      <Discover/>
-      <DeveloperStory/>
-      <Advertisement/>
-      <Footer/>
+     <AzureHomePage/>
     </div>
   );
 }

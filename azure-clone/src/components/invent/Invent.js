@@ -6,34 +6,35 @@ import TfiAngleRight from 'react-icons/'
 
 import "./Invent.css";
 
-function Invent() {
-  const [data, setData] = useState([]);
-  const fetchData = () => {
-    fetch(
-      "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data.landingPage);
-      });
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+function Invent(props) {
+  const {invents} = props
+  // const [data, setData] = useState([]);
+  // const fetchData = () => {
+  //   fetch(
+  //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
+  //   )
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data.landingPage);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   return (
     <>
       <div className="landing-page-mobile">
         <div className="back-image">
-          <img src={data.backgroundImage} />
+          <img src={invents.backgroundImage} />
         </div>
         <div className="invent-content-main">
           <div className="invent-content">
-            <h1>{data.heading}</h1>
+            <h1>{invents.heading}</h1>
             <div className="invent-texts">
-              <h1>{data.mainHeading}</h1>
-              <p>{data.paragraph}</p>
+              <h1>{invents.mainHeading}</h1>
+              <p>{invents.paragraph}</p>
             </div>
             <div className="buttons">
               <a href="">Get Started</a>
@@ -45,16 +46,16 @@ function Invent() {
       <div
         className="landingpage-desktop"
         style={{
-          background: `url(${data.desktopBackground}) 50% 0%/ cover no-repeat`,
+          background: `url(${invents.desktopBackground}) 50% 0%/ cover no-repeat`,
         }}
       >
         <div className="landing-page-desk">
           <div className="invent-content-main">
             <div className="invent-content">
-              <h1>{data.heading}</h1>
+              <h1>{invents.heading}</h1>
               <div className="invent-texts">
-                <h1>{data.mainHeading}</h1>
-                <p>{data.paragraph}</p>
+                <h1>{invents.mainHeading}</h1>
+                <p>{invents.paragraph}</p>
               </div>
               <div className="buttons">
                 <a href="">Get Started</a>

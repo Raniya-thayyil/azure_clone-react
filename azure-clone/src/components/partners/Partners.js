@@ -5,52 +5,63 @@ import Customers from "./Customers";
 
 import './Partners.css'
 
-function Partners() {
-  const [data, setData] = useState([]);
-  const [val, setVal] = useState("fujistu");
-  const [fujistu, setFujistu] = useState([]);
-  const [nba, setNba] = useState([]);
-  const [hr, setHr] = useState([]);
-  const [nhs, setNhs] = useState([]);
-  const [forza, setForza] = useState([]);
+function Partners(props) {
+  const {
+    datas,
+    fujistu,
+    nba,
+    hr,
+    nhs,
+    forza,
+    value,
+    clickFunction
 
-  const fetchData = () => {
-    fetch(
-      "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data.customersList);
-        setFujistu(data.fujistu);
-        setNba(data.nba);
-        setHr(data.hr);
-        setNhs(data.nhs);        
-        setForza(data.forza);
-      });
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  } = props
+  // const [data, setData] = useState([]);
+  // const [val, setVal] = useState("fujistu");
+  // const [fujistu, setFujistu] = useState([]);
+  // const [nba, setNba] = useState([]);
+  // const [hr, setHr] = useState([]);
+  // const [nhs, setNhs] = useState([]);
+  // const [forza, setForza] = useState([]);
 
-  const handleClick = (item) => {
-    setVal(item);
-  };
+  // const fetchData = () => {
+  //   fetch(
+  //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
+  //   )
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data.customersList);
+  //       setFujistu(data.fujistu);
+  //       setNba(data.nba);
+  //       setHr(data.hr);
+  //       setNhs(data.nhs);        
+  //       setForza(data.forza);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // const handleClick = (item) => {
+  //   setVal(item);
+  // };
   return (
     <>
     <div className="partners-main">
         <div className="partners">
             <ul>
-            {data.map((item, idx) => (
-              <li onClick={() => handleClick(item.value)} key={item.value}>
+            {datas.map((item, idx) => (
+              <li onClick={() => clickFunction(item.value)} key={item.value}>
                 <img src={item.image}/>
               </li>
             ))}
             </ul>
         </div>
         <div className="partner-desc">
-        {val === "fujistu" &&
+        {value === "fujistu" &&
             fujistu.map((item) => {
               return (
                 <Customers
@@ -59,7 +70,7 @@ function Partners() {
                 />
               );
             })}
-             {val === "nba" &&
+             {value === "nba" &&
             nba.map((item) => {
               return (
                 <Customers
@@ -68,7 +79,7 @@ function Partners() {
                 />
               );
             })}
-             {val === "hr" &&
+             {value === "hr" &&
             hr.map((item) => {
               return (
                 <Customers
@@ -77,7 +88,7 @@ function Partners() {
                 />
               );
             })}
-               {val === "nhs" &&
+               {value === "nhs" &&
             nhs.map((item) => {
               return (
                 <Customers
@@ -86,7 +97,7 @@ function Partners() {
                 />
               );
             })}
-               {val === "forza" &&
+               {value === "forza" &&
             forza.map((item) => {
               return (
                 <Customers

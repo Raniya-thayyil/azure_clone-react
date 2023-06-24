@@ -4,26 +4,13 @@ import { useEffect } from "react";
 
 import "./Advertisement.css";
 
-function Advertisement() {
-  const [data, setData] = useState([]);
-  const fetchData = () => {
-    fetch(
-      "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data.advertisement);
-      });
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+function Advertisement(props) {
+  const {adsList} = props
+
   return (
     <>
       <div className="ads-main">
-      {data.map((item, idx) => (
+      {adsList.map((item, idx) => (
             <div className="each-ad-card" key={idx}>
               <img src={item.icon} />
               <div className="inside-ad">

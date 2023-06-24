@@ -4,26 +4,27 @@ import { useEffect } from 'react';
 
 import './FirstCards.css';
 
-function FirstCards() {
-    const [data, setData] = useState([]);
-    const fetchData = () => {
-      fetch(
-        "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-      )
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          setData(data.cloudSolutions);
-        });
-    };
-    useEffect(() => {
-      fetchData();
-    }, []);
+function FirstCards(props) {
+  const {cloudsList} = props
+    // const [data, setData] = useState([]);
+    // const fetchData = () => {
+    //   fetch(
+    //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
+    //   )
+    //     .then((response) => {
+    //       return response.json();
+    //     })
+    //     .then((data) => {
+    //       setData(data.cloudSolutions);
+    //     });
+    // };
+    // useEffect(() => {
+    //   fetchData();
+    // }, []);
   return (
     <div>
       <div className="cards-main">
-        {data.map((item, idx) => (
+        {cloudsList.map((item, idx) => (
           <div className="each-card" key={idx}>
             <img src={item.image} />
             <div className="inside-card">

@@ -7,56 +7,73 @@ import { FaChevronRight } from "react-icons/fa";
 
 import "./Features.css";
 
-function Features() {
-  const [data, setData] = useState([]);
-  // const [nav, setNav] = useState([]);
-  const [val, setVal] = useState("feature");
-  const [feature, setFeature] = useState([]);
-  const [ai, setAi] = useState([]);
-  const [compute, setCompute] = useState([]);
-  const [container, setContainer] = useState([]);
-  const [hybrid, setHybrid] = useState([]);
-  const [iot, setIot] = useState([]);
-  const fetchData = () => {
-    fetch(
-      "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data.featuresList);
-        setFeature(data.Featured);
-        setAi(data.AiMmachineLearning);
-        setCompute(data.Compute);
-        setContainer(data.Containers);
-        setHybrid(data.HybridMulticloud);
-        setIot(data.InternetOfThings);
-      });
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+function Features(props) {
+  const {
+    mainDatas,
+    features,
+    aiMachine,
+    computes,
+    containers,
+    hybrids,
+    iots,
+    handleClickfunction,
+    value
 
-  const handleClick = (item) => {
-    setVal(item);
-  };
+
+
+
+
+
+  } = props
+  // const [data, setData] = useState([]);
+  // // const [nav, setNav] = useState([]);
+  // const [value, setvalue] = useState("feature");
+  // const [feature, setFeature] = useState([]);
+  // const [ai, setAi] = useState([]);
+  // const [compute, setCompute] = useState([]);
+  // const [container, setContainer] = useState([]);
+  // const [hybrid, setHybrid] = useState([]);
+  // const [iot, setIot] = useState([]);
+  // const fetchData = () => {
+  //   fetch(
+  //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
+  //   )
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data.featuresList);
+  //       setFeature(data.Featured);
+  //       setAi(data.AiMmachineLearning);
+  //       setCompute(data.Compute);
+  //       setContainer(data.Containers);
+  //       setHybrid(data.HybridMulticloud);
+  //       setIot(data.InternetOfThings);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // const handleClick = (item) => {
+  //   setvalue(item);
+  // };
 
   return (
     <>
       <div className="whole-container">
         <div className="feature-list">
           <ul>
-            {data.map((item, idx) => (
-              <li onClick={() => handleClick(item.value)} key={item.value}>
+            {mainDatas.map((item, idx) => (
+              <li onClick={() => handleClickfunction(item.value)} key={item.valueue}>
                 {item.title}
               </li>
             ))}
           </ul>
         </div>
         <div className="main-cards">
-          {val === "feature" &&
-            feature.map((item) => {
+          {value === "feature" &&
+            features.map((item) => {
               return (
                 <FeatureCards
                   image={item.icon}
@@ -66,8 +83,8 @@ function Features() {
                 />
               );
             })}
-          {val === "ai" &&
-            ai.map((item) => {
+          {value === "ai" &&
+            aiMachine.map((item) => {
               return (
                 <FeatureCards
                   image={item.icon}
@@ -77,8 +94,8 @@ function Features() {
                 />
               );
             })}
-          {val === "compute" &&
-            compute.map((item) => {
+          {value === "compute" &&
+            computes.map((item) => {
               return (
                 <FeatureCards
                   image={item.icon}
@@ -88,8 +105,8 @@ function Features() {
                 />
               );
             })}
-          {val === "container" &&
-            container.map((item) => {
+          {value === "container" &&
+            containers.map((item) => {
               return (
                 <FeatureCards
                   image={item.icon}
@@ -99,8 +116,8 @@ function Features() {
                 />
               );
             })}
-          {val === "hhybrid" &&
-            hybrid.map((item) => {
+          {value === "hhybrid" &&
+            hybrids.map((item) => {
               return (
                 <FeatureCards
                   image={item.icon}
@@ -110,8 +127,8 @@ function Features() {
                 />
               );
             })}
-          {val === "iot" &&
-            iot.map((item) => {
+          {value === "iot" &&
+            iots.map((item) => {
               return (
                 <FeatureCards
                   image={item.icon}
