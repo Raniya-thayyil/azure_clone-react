@@ -6,22 +6,23 @@ import { FaChevronRight } from "react-icons/fa";
 
 import "./Discover.css";
 
-function Discover() {
-  const [data, setData] = useState([]);  
-  const fetchData = () => {
-    fetch(
-      "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-    )
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setData(data.Discoveries);
-      });
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+function Discover(props) {
+  const {discoveries} = props
+  // const [data, setData] = useState([]);  
+  // const fetchData = () => {
+  //   fetch(
+  //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
+  //   )
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       setData(data.Discoveries);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
   return (
     <>
       <div className="discover-main">
@@ -29,7 +30,7 @@ function Discover() {
           <h2>Discover what's happening on Azure</h2>
         </div>
         <div className="discover-cards-main">
-          {data.map((item, idx) => (
+          {discoveries.map((item, idx) => (
             <div className="each-card" key={idx}>
               <img src={item.image} />
               <div className="inside-discovercard">
