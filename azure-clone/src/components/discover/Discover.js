@@ -13,6 +13,7 @@ function Discover(props) {
       <div className="discover-main">
         <div className="discover-head">
           <h2>Discover what's happening on Azure</h2>
+          
         </div>
         <div className="discover-cards-main">
           {discoveries.map((item, idx) => (
