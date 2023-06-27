@@ -6,21 +6,7 @@ import './FirstCards.css';
 
 function FirstCards(props) {
   const {cloudsList} = props
-    // const [data, setData] = useState([]);
-    // const fetchData = () => {
-    //   fetch(
-    //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-    //   )
-    //     .then((response) => {
-    //       return response.json();
-    //     })
-    //     .then((data) => {
-    //       setData(data.cloudSolutions);
-    //     });
-    // };
-    // useEffect(() => {
-    //   fetchData();
-    // }, []);
+    
   return (
     <div>
       <div className="cards-main">
