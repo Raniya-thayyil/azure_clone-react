@@ -7,22 +7,7 @@ import { FaChevronRight } from "react-icons/fa";
 import "./Discover.css";
 
 function Discover(props) {
-  const {discoveries} = props
-  // const [data, setData] = useState([]);  
-  // const fetchData = () => {
-  //   fetch(
-  //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-  //   )
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       setData(data.Discoveries);
-  //     });
-  // };
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
+  const {discoveries} = props  
   return (
     <>
       <div className="discover-main">
