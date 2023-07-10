@@ -17,37 +17,7 @@ function Partners(props) {
     clickFunction
 
   } = props
-  // const [data, setData] = useState([]);
-  // const [val, setVal] = useState("fujistu");
-  // const [fujistu, setFujistu] = useState([]);
-  // const [nba, setNba] = useState([]);
-  // const [hr, setHr] = useState([]);
-  // const [nhs, setNhs] = useState([]);
-  // const [forza, setForza] = useState([]);
 
-  // const fetchData = () => {
-  //   fetch(
-  //     "https://raw.githubusercontent.com/Raniya-thayyil/data-json/main/data.json"
-  //   )
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       setData(data.customersList);
-  //       setFujistu(data.fujistu);
-  //       setNba(data.nba);
-  //       setHr(data.hr);
-  //       setNhs(data.nhs);        
-  //       setForza(data.forza);
-  //     });
-  // };
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  // const handleClick = (item) => {
-  //   setVal(item);
-  // };
   return (
     <>
     <div className="partners-main">
